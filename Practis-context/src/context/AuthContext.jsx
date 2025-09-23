@@ -1,9 +1,9 @@
-import { Children, useState } from "react";
+import { Children, createContext, useState } from "react";
 
 export const AuthContext = createContext(null);
 
-export const AuthProvider = ({ Children }) => {
-  const [User, setUser] = useState();
+export const AuthProvider = ({ children }) => {
+  const [user, setUser] = useState();
 
   // login function
   const login = (username, password) => {
@@ -20,8 +20,8 @@ export const AuthProvider = ({ Children }) => {
     setUser(null);
   };
   return (
-    <AuthContext.Provider value={{ User, login, logout }}>
-      {Children}
+    <AuthContext.Provider value={{ user, login, logout }}>
+      {children}
     </AuthContext.Provider>
   );
 };

@@ -1,9 +1,8 @@
 import React from "react";
-import { UserProvider } from "./context/Usercontext.jsx";
-import Login from "./component/Login.jsx";
-import Profile from "./component/Profile.jsx";
-import Navbar from "./component/Navbar.jsx";
-import { AuthProvider } from "./component2/Navbar.jsx";
+import Login from "./component2/Login.jsx";
+import Profile from "./component2/Profile.jsx";
+import Navbar from "./component2/Navbar.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
 const App = () => {
   return (
     // <UserProvider>
