@@ -1,7 +1,7 @@
 import React from "react";
-import Login from "./component2/Login.jsx";
 import Profile from "./component2/Profile.jsx";
 import Navbar from "./component2/Navbar.jsx";
+import Login from "./component2/Login.jsx";
 import { AuthProvider } from "./context/AuthContext.jsx";
 const App = () => {
   return (
@@ -14,9 +14,10 @@ const App = () => {
     // </UserProvider>
     <AuthProvider>
       <Login/>
-      <Profile/>
+      <Profile/>    
       <Navbar/>
     </AuthProvider>
+  
   );
 };
 

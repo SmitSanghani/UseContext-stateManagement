@@ -3,13 +3,13 @@ import { AuthContext } from "../context/AuthContext";
 
 const Login = () => {
   const { login, user } = useContext(AuthContext);
-  const [username, setUsername] = useState();
-  const [password, setpassword] = useState();
+  const [username, setUsername] = useState("");
+  const [password, setpassword] = useState("");
 
   const Handelsubmit = () => {
     const success = login(username, password);
     if (!success) {
-      alert("Invalid credentials! Try username: smit, password: 1234");
+      alert("Invalid credentials! Try username: smit, password: 123");
     }
     setUsername("");
     setpassword("");
@@ -24,13 +24,15 @@ const Login = () => {
       <input
         type="text"
         placeholder="enter name"
+        value={username}
         onChange={(e) => {
           setUsername(e.target.value);
         }}
       /> <br />
       <input
-        type="text"
+        type="password"
         placeholder="enter password"
+        value={password}
         onChange={(e) => {
           setpassword(e.target.value);
         }}
