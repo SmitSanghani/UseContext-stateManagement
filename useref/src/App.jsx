@@ -1,8 +1,11 @@
 import React from 'react'
+import UseRef from './component/UseRef'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>App
+      <UseRef/>
+      </div>
   )
 }
 
