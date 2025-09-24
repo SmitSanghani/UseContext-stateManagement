@@ -6,12 +6,11 @@ import Usecallback from './component/Usecallback'
 
 const App = () => {
   return (
-    <div>App
+    <div>
       {/* <UseRef/>
       <UseRef2/>
       <UseRefAnimationExample/> */}
         <Usecallback/>
-        <childcomponent/>
       </div>
   )
 }
