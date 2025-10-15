@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sidebar{
+    width: 300px;
+    background-color: aqua;
+    height: 100vh;
+}
+
+
+.container-layout{
+    display: flex;
+}
+.content-body{
+    background-color: chartreuse;
+    flex: 1;
+    height: 100vh;
+}
