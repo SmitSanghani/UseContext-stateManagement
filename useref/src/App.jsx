@@ -1,18 +1,11 @@
-import React from 'react'
-import UseRef from './component/UseRef'
-import UseRef2 from './component/UseRef2'
-import UseRefAnimationExample from './component/UseRefAnimationExample'
-import Usecallback from './component/Usecallback'
+import Useref from "./component/Useref";
 
-const App = () => {
+function App() {
   return (
     <div>
-      {/* <UseRef/>
-      <UseRef2/>
-      <UseRefAnimationExample/> */}
-        <Usecallback/>
-      </div>
-  )
+      <Useref />
+    </div>
+  );
 }
 
-export default App
+export default App;

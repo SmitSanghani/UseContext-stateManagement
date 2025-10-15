@@ -1,27 +1,33 @@
 import React, { useRef, useState } from "react";
 
-const UseRef = () => {
-  const [count, setcount] = useState(""); // ✅ Fixed here
+const Useref = () => {
+  const obj = {
+    fname: useRef(),
+    lname: useRef(),
+  };
 
-  const refElement = useRef(0);
+  const [formValue, setFormValue] = useState({
+    fname: "",
+    lname: "",
+  });
 
-  const add = (e) => {
-    setcount(e.target.value);         // Update input value
-    refElement.current = refElement.current + 1; // Count re-render nahi karega
+  const submit = () => {
+    setFormValue({
+      fname: obj.fname.current.value,
+      lname: obj.lname.current.value,
+    });
   };
 
   return (
     <div>
-      <h2>UseRef Example</h2>
-      <input
-        type="text"
-        onChange={add}
-        value={count} // Controlled input
-        placeholder="Type something..."
-      />
-      <h1>Render Count: {refElement.current}</h1>
+      <input type="text" ref={obj.fname} placeholder="First Name" />
+      <input type="text" ref={obj.lname} placeholder="Last Name" />
+      <button onClick={submit}>Click</button>
+
+      <h3>First Name: {formValue.fname}</h3>
+      <h3>Last Name: {formValue.lname}</h3>
     </div>
   );
 };
 
-export default UseRef;
+export default Useref;

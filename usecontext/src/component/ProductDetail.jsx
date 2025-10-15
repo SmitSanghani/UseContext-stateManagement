@@ -1,8 +1,13 @@
-import React from 'react';
+import React from "react";
 
 const ProductDetail = ({ data, theme }) => {
   return (
-    <div style={{ backgroundColor: theme === "dark" ? "black" : "white", color: theme === "dark" ? "white" : "black" }}>
+    <div
+      style={{
+        backgroundColor: theme === "dark" ? "black" : "white",
+        color: theme === "dark" ? "white" : "black",
+      }}
+    >
       <h1>{data.title}</h1>
       <h1>{data.brand}</h1>
       <h1>{data.name}</h1>
